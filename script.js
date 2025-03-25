@@ -4,6 +4,14 @@ AOS.init({
     once: true
 });
 
+// Обработка кнопок "Подробнее" в услугах
+document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const details = button.nextElementSibling;
+        details.classList.toggle('hidden');
+    });
+});
+
 // Обработка формы с отправкой в Telegram
 document.getElementById('contact-form')?.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -37,4 +45,3 @@ document.getElementById('contact-form')?.addEventListener('submit', function(e) 
     })
     .catch(error => alert('Ошибка: ' + error));
 });
-
