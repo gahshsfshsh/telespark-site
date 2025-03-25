@@ -8,182 +8,8 @@
     <title>TeleSpark Solutions - Боты и мини-приложения для Telegram</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-..." crossorigin="anonymous" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            line-height: 1.6;
-            color: #fff;
-            background-color: #0a0a23;
-            overflow-x: hidden;
-        }
-        header {
-            background: linear-gradient(135deg, #0078d4, #00b4ff);
-            text-align: center;
-            padding: 120px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
-            animation: glow 10s infinite;
-        }
-        header h1 {
-            font-size: 3.5em;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        header p {
-            font-size: 1.5em;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 35px;
-            background-color: #ff6f61;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(255,111,97,0.4);
-        }
-        .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(255,111,97,0.6);
-        }
-        section {
-            padding: 100px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h2 {
-            font-size: 2.8em;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 50px;
-            color: #fff;
-        }
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-        .card {
-            background: #1e1e3f;
-            padding: 35px;
-            border-radius: 20px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 15px 40px rgba(0,120,212,0.3);
-        }
-        .card h3 {
-            font-size: 1.6em;
-            margin-bottom: 15px;
-            color: #00b4ff;
-        }
-        .card p {
-            font-size: 1.1em;
-            color: #d1d1e9;
-        }
-        .cases {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-        .case-card {
-            background: #2a2a5a;
-            padding: 35px;
-            border-radius: 20px;
-            text-align: left;
-        }
-        .case-card h3 {
-            font-size: 1.5em;
-            color: #ff6f61;
-            margin-bottom: 15px;
-        }
-        .case-card p {
-            font-size: 1.1em;
-            color: #d1d1e9;
-            margin-bottom: 20px;
-        }
-        .case-card .btn {
-            font-size: 1em;
-            padding: 12px 25px;
-        }
-        #about p {
-            font-size: 1.3em;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            color: #d1d1e9;
-        }
-        #contacts {
-            background: linear-gradient(135deg, #1e1e3f, #2a2a5a);
-            border-radius: 25px;
-            margin: 0 20px;
-            padding: 60px 20px;
-        }
-        form {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 18px;
-            margin: 15px 0;
-            border: none;
-            border-radius: 12px;
-            background: #fff;
-            color: #333;
-            font-size: 1.1em;
-        }
-        button {
-            width: 100%;
-            padding: 18px;
-            background-color: #ff6f61;
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #e65a50;
-        }
-        footer {
-            background: #0078d4;
-            padding: 30px;
-            text-align: center;
-            font-size: 1em;
-        }
-        @keyframes glow {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.5em; }
-            header p { font-size: 1.2em; }
-            h2 { font-size: 2em; }
-            .card, .case-card { width: 100%; }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header data-aos="fade-down">
@@ -196,16 +22,19 @@
         <h2>Что мы предлагаем</h2>
         <div class="services">
             <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-robot"></i>
                 <h3>Текстовые боты</h3>
-                <p>Автоматизация поддержки, сбор заявок и интерактивные сценарии для ваших клиентов.</p>
+                <p>Автоматизация поддержки, сбор заявок и интерактивные сценарии.</p>
             </div>
             <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-mobile-alt"></i>
                 <h3>Мини-приложения</h3>
-                <p>Личные кабинеты, витрины товаров и удобные инструменты прямо в Telegram.</p>
+                <p>Личные кабинеты, витрины товаров и удобные инструменты.</p>
             </div>
             <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-plug"></i>
                 <h3>Интеграции</h3>
-                <p>Подключение к CRM, платежным системам и аналитике для максимальной эффективности.</p>
+                <p>Подключение к CRM, платежным системам и аналитике.</p>
             </div>
         </div>
     </section>
@@ -214,26 +43,26 @@
         <h2>Наши успехи</h2>
         <div class="cases">
             <div class="case-card" data-aos="fade-right" data-aos-delay="100">
-                <h3>Бот для доставки еды</h3>
-                <p>Разработали бота с меню и интеграцией в CRM. Время обработки заказов сократилось на 40%.</p>
-                <a href="#contacts" class="btn">Заказать похожее</a>
+                <h3>Текстовый бот для фермерского магазина</h3>
+                <p>Бот для заказа продуктов с уведомлениями. Продажи выросли на 35%.</p>
+                <a href="case1.html" class="btn">Подробнее</a>
             </div>
             <div class="case-card" data-aos="fade-right" data-aos-delay="200">
-                <h3>Фитнес-приложение</h3>
-                <p>Мини-приложение с расписанием и уведомлениями. Посещаемость выросла на 25%.</p>
-                <a href="#contacts" class="btn">Заказать похожее</a>
+                <h3>Мини-приложение для фермерского магазина</h3>
+                <p>TWA с каталогом и оплатой. Средний чек вырос на 20%.</p>
+                <a href="case2.html" class="btn">Подробнее</a>
             </div>
             <div class="case-card" data-aos="fade-right" data-aos-delay="300">
                 <h3>Квест-бот</h3>
                 <p>Интерактивный бот для мероприятий. 90% участников завершили квест.</p>
-                <a href="#contacts" class="btn">Заказать похожее</a>
+                <a href="case3.html" class="btn">Подробнее</a>
             </div>
         </div>
     </section>
 
     <section id="about" data-aos="fade-up">
         <h2>Кто мы такие</h2>
-        <p>TeleSpark Solutions — команда экспертов, создающих инновационные решения для Telegram с 2020 года. Мы превращаем ваши идеи в инструменты, которые увеличивают прибыль, автоматизируют процессы и вдохновляют клиентов.</p>
+        <p>TeleSpark Solutions — команда экспертов, создающих инновационные решения для Telegram с 2020 года. Мы превращаем ваши идеи в инструменты, которые увеличивают прибыль и вдохновляют клиентов.</p>
     </section>
 
     <section id="contacts" data-aos="fade-up">
@@ -244,7 +73,7 @@
             <textarea name="message" placeholder="Расскажите о вашем проекте" rows="5" required></textarea>
             <button type="submit">Отправить заявку</button>
         </form>
-        <p style="text-align: center; margin-top: 20px;">Telegram: @TeleSparkSupport | Email: hello@telespark.solutions</p>
+        <p>Telegram: @TeleSparkSupport | Email: hello@telespark.solutions</p>
     </section>
 
     <footer>
@@ -252,40 +81,6 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-..." crossorigin="anonymous"></script>
-    <script>
-        // Инициализация AOS (анимации при прокрутке)
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-
-        // Обработка формы
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-            const data = {
-                name: formData.get('name'),
-                telegram: formData.get('telegram'),
-                message: formData.get('message')
-            };
-            
-            // Имитация отправки (для локального теста)
-            alert(`Спасибо, ${data.name}! Ваша заявка отправлена.\nTelegram: ${data.telegram}\nСообщение: ${data.message}`);
-            
-            // Реальная отправка (раскомментировать при наличии backend)
-            /*
-            fetch('https://your-backend-url.com/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(result => alert('Заявка успешно отправлена!'))
-            .catch(error => alert('Ошибка отправки: ' + error));
-            */
-            
-            this.reset();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
