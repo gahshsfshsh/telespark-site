@@ -6,12 +6,12 @@
 }
 body {
     line-height: 1.6;
-    color: #fff;
-    background-color: #0a0a23;
+    color: #3d2b1f;
+    background-color: #fffaf0;
     overflow-x: hidden;
 }
 header {
-    background: linear-gradient(135deg, #0078d4, #00b4ff);
+    background: linear-gradient(135deg, #f9a825, #ffca28);
     text-align: center;
     padding: 120px 20px;
     position: relative;
@@ -24,34 +24,65 @@ header::before {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
     animation: glow 10s infinite;
 }
 header h1 {
     font-size: 3.5em;
     font-weight: 700;
     margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    color: #3d2b1f;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 header p {
     font-size: 1.5em;
     max-width: 700px;
     margin: 0 auto 30px;
+    color: #5a3e2b;
+}
+.btn-container {
+    position: relative;
+    display: inline-block;
 }
 .btn {
     display: inline-block;
     padding: 15px 35px;
-    background-color: #ff6f61;
+    background-color: #e67e22;
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 15px rgba(255,111,97,0.4);
+    box-shadow: 0 4px 15px rgba(230,126,34,0.4);
 }
 .btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(255,111,97,0.6);
+    box-shadow: 0 8px 25px rgba(230,126,34,0.6);
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fffaf0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 200px;
+    padding: 10px 0;
+}
+.btn-container:hover .dropdown {
+    display: block;
+}
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #e67e22;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.dropdown-item:hover {
+    background: #f9a825;
+    color: white;
 }
 section {
     padding: 100px 20px;
@@ -63,7 +94,7 @@ h2 {
     font-weight: 700;
     text-align: center;
     margin-bottom: 50px;
-    color: #fff;
+    color: #3d2b1f;
 }
 .services {
     display: grid;
@@ -71,7 +102,7 @@ h2 {
     gap: 40px;
 }
 .card {
-    background: #1e1e3f;
+    background: #fef5e7;
     padding: 35px;
     border-radius: 20px;
     text-align: center;
@@ -79,21 +110,21 @@ h2 {
 }
 .card:hover {
     transform: translateY(-15px);
-    box-shadow: 0 15px 40px rgba(0,120,212,0.3);
+    box-shadow: 0 15px 40px rgba(230,126,34,0.2);
 }
 .card i {
     font-size: 2.5em;
-    color: #00b4ff;
+    color: #e67e22;
     margin-bottom: 15px;
 }
 .card h3 {
     font-size: 1.6em;
     margin-bottom: 15px;
-    color: #00b4ff;
+    color: #3d2b1f;
 }
 .card p {
     font-size: 1.1em;
-    color: #d1d1e9;
+    color: #5a3e2b;
 }
 .cases {
     display: grid;
@@ -101,30 +132,30 @@ h2 {
     gap: 40px;
 }
 .case-card {
-    background: #2a2a5a;
+    background: #fef5e7;
     padding: 35px;
     border-radius: 20px;
     text-align: left;
 }
 .case-card h3 {
     font-size: 1.5em;
-    color: #ff6f61;
+    color: #e67e22;
     margin-bottom: 15px;
 }
 .case-card p {
     font-size: 1.1em;
-    color: #d1d1e9;
+    color: #5a3e2b;
     margin-bottom: 20px;
 }
 .case-details {
-    background: #1e1e3f;
+    background: #fef5e7;
     padding: 50px;
     border-radius: 20px;
     margin: 20px;
 }
 .case-details ul {
     list-style: none;
-    color: #d1d1e9;
+    color: #5a3e2b;
     font-size: 1.2em;
     margin: 20px 0;
 }
@@ -136,10 +167,10 @@ h2 {
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
-    color: #d1d1e9;
+    color: #5a3e2b;
 }
 #contacts {
-    background: linear-gradient(135deg, #1e1e3f, #2a2a5a);
+    background: linear-gradient(135deg, #fef5e7, #fffaf0);
     border-radius: 25px;
     margin: 0 20px;
     padding: 60px 20px;
@@ -152,16 +183,16 @@ input, textarea {
     width: 100%;
     padding: 18px;
     margin: 15px 0;
-    border: none;
+    border: 1px solid #e67e22;
     border-radius: 12px;
     background: #fff;
-    color: #333;
+    color: #3d2b1f;
     font-size: 1.1em;
 }
 button {
     width: 100%;
     padding: 18px;
-    background-color: #ff6f61;
+    background-color: #e67e22;
     color: white;
     border: none;
     border-radius: 12px;
@@ -170,10 +201,10 @@ button {
     transition: background-color 0.3s;
 }
 button:hover {
-    background-color: #e65a50;
+    background-color: #d35400;
 }
 footer {
-    background: #0078d4;
+    background: #f9a825;
     padding: 30px;
     text-align: center;
     font-size: 1em;
@@ -181,6 +212,14 @@ footer {
 footer p, #contacts p {
     text-align: center;
     margin-top: 20px;
+    color: #3d2b1f;
+}
+#contacts p a {
+    color: #e67e22;
+    text-decoration: none;
+}
+#contacts p a:hover {
+    text-decoration: underline;
 }
 @keyframes glow {
     0% { transform: rotate(0deg); }
