@@ -37,3 +37,4 @@ document.getElementById('contact-form')?.addEventListener('submit', function(e) 
     })
     .catch(error => alert('Ошибка: ' + error));
 });
+
