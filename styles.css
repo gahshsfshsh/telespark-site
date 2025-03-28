@@ -13,7 +13,7 @@ body {
 header {
     background: linear-gradient(135deg, #f9a825, #ffca28);
     text-align: center;
-    padding: 140px 20px;
+    padding: 160px 20px;
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -29,27 +29,27 @@ header::before {
     animation: glow 10s infinite;
 }
 header h1 {
-    font-size: 4em;
+    font-size: 4.5em;
     font-weight: 700;
     margin-bottom: 20px;
     color: #3d2b1f;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 header p {
-    font-size: 1.8em;
-    max-width: 800px;
-    margin: 0 auto 30px;
+    font-size: 2em;
+    max-width: 900px;
+    margin: 0 auto 40px;
     color: #5a3e2b;
 }
 .btn {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 18px 45px;
     background-color: #e67e22;
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1.3em;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 15px rgba(230,126,34,0.4);
 }
@@ -64,18 +64,47 @@ header p {
 .secondary-btn:hover {
     background-color: #e67e22;
 }
+.success-btn {
+    background-color: #28a745;
+}
+.success-btn:hover {
+    background-color: #218838;
+}
 section {
-    padding: 120px 20px;
+    padding: 140px 20px;
     max-width: 1400px;
     margin: 0 auto;
 }
 h2 {
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
     color: #3d2b1f;
     text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+.why-item {
+    text-align: center;
+}
+.why-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.why-item h3 {
+    font-size: 1.8em;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+.why-item p {
+    font-size: 1.2em;
+    color: #5a3e2b;
 }
 .services {
     display: grid;
@@ -90,14 +119,15 @@ h2 {
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
+.card img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
 .card:hover {
     transform: translateY(-15px);
     box-shadow: 0 15px 40px rgba(230,126,34,0.2);
-}
-.card i {
-    font-size: 3em;
-    color: #e67e22;
-    margin-bottom: 20px;
 }
 .card h3 {
     font-size: 1.8em;
@@ -150,8 +180,14 @@ h2 {
     background: #fff;
     padding: 40px;
     border-radius: 25px;
-    text-align: left;
+    text-align: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+.case-card img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 .case-card:hover {
     transform: translateY(-10px);
@@ -173,15 +209,63 @@ h2 {
     border-radius: 25px;
     margin: 30px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: center;
+}
+.case-details img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    margin-bottom: 30px;
 }
 .case-details ul {
     list-style: none;
     color: #5a3e2b;
     font-size: 1.3em;
     margin: 30px 0;
+    text-align: left;
 }
 .case-details ul li {
     margin: 15px 0;
+}
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+.review-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+.review-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.review-card h3 {
+    font-size: 1.5em;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+.review-card p {
+    font-size: 1.1em;
+    color: #5a3e2b;
+}
+#promo {
+    background: linear-gradient(135deg, #f9a825, #ffca28);
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 30px;
+    margin: 0 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+#promo p {
+    font-size: 1.5em;
+    color: #3d2b1f;
+    margin-bottom: 30px;
 }
 #about p {
     font-size: 1.4em;
@@ -226,6 +310,9 @@ button {
 button:hover {
     background-color: #d35400;
 }
+.hidden {
+    display: none;
+}
 footer {
     background: linear-gradient(135deg, #f9a825, #ffca28);
     padding: 40px;
@@ -252,8 +339,8 @@ footer p, #contacts p {
     100% { transform: rotate(360deg); }
 }
 @media (max-width: 768px) {
-    header h1 { font-size: 2.8em; }
-    header p { font-size: 1.4em; }
-    h2 { font-size: 2.2em; }
+    header h1 { font-size: 3em; }
+    header p { font-size: 1.5em; }
+    h2 { font-size: 2.5em; }
     .card, .case-card { width: 100%; }
 }
