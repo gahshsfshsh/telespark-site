@@ -7,15 +7,16 @@
 body {
     line-height: 1.6;
     color: #3d2b1f;
-    background-color: #fffaf0;
+    background: linear-gradient(135deg, #fffaf0, #fef5e7);
     overflow-x: hidden;
 }
 header {
     background: linear-gradient(135deg, #f9a825, #ffca28);
     text-align: center;
-    padding: 120px 20px;
+    padding: 140px 20px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 header::before {
     content: '';
@@ -28,30 +29,27 @@ header::before {
     animation: glow 10s infinite;
 }
 header h1 {
-    font-size: 3.5em;
+    font-size: 4em;
     font-weight: 700;
     margin-bottom: 20px;
     color: #3d2b1f;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 header p {
-    font-size: 1.5em;
-    max-width: 700px;
+    font-size: 1.8em;
+    max-width: 800px;
     margin: 0 auto 30px;
     color: #5a3e2b;
 }
-.btn-container {
-    position: relative;
-    display: inline-block;
-}
 .btn {
     display: inline-block;
-    padding: 15px 35px;
+    padding: 15px 40px;
     background-color: #e67e22;
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
+    font-size: 1.2em;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 15px rgba(230,126,34,0.4);
 }
@@ -59,70 +57,79 @@ header p {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(230,126,34,0.6);
 }
+.secondary-btn {
+    background-color: #f9a825;
+    margin-left: 20px;
+}
+.secondary-btn:hover {
+    background-color: #e67e22;
+}
 section {
-    padding: 100px 20px;
-    max-width: 1200px;
+    padding: 120px 20px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 h2 {
-    font-size: 2.8em;
+    font-size: 3em;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     color: #3d2b1f;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 .services {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 50px;
 }
 .card {
-    background: #fef5e7;
-    padding: 35px;
-    border-radius: 20px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 25px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 .card:hover {
     transform: translateY(-15px);
     box-shadow: 0 15px 40px rgba(230,126,34,0.2);
 }
 .card i {
-    font-size: 2.5em;
+    font-size: 3em;
     color: #e67e22;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .card h3 {
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin-bottom: 15px;
     color: #3d2b1f;
 }
 .card p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #5a3e2b;
 }
 .toggle-btn {
     background: #f9a825;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 20px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 20px;
+    font-size: 1em;
     transition: background 0.3s;
 }
 .toggle-btn:hover {
     background: #e67e22;
 }
 .details {
-    background: #fff;
-    padding: 20px;
+    background: #fef5e7;
+    padding: 25px;
     border-radius: 15px;
-    margin-top: 20px;
+    margin-top: 25px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     color: #5a3e2b;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 .details.hidden {
     display: none;
@@ -136,75 +143,83 @@ h2 {
 }
 .cases {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 50px;
 }
 .case-card {
-    background: #fef5e7;
-    padding: 35px;
-    border-radius: 20px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 25px;
     text-align: left;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+.case-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(230,126,34,0.2);
 }
 .case-card h3 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     color: #e67e22;
     margin-bottom: 15px;
 }
 .case-card p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #5a3e2b;
     margin-bottom: 20px;
 }
 .case-details {
-    background: #fef5e7;
-    padding: 50px;
-    border-radius: 20px;
-    margin: 20px;
+    background: #fff;
+    padding: 60px;
+    border-radius: 25px;
+    margin: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 .case-details ul {
     list-style: none;
     color: #5a3e2b;
-    font-size: 1.2em;
-    margin: 20px 0;
+    font-size: 1.3em;
+    margin: 30px 0;
 }
 .case-details ul li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 #about p {
-    font-size: 1.3em;
+    font-size: 1.4em;
     text-align: center;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     color: #5a3e2b;
 }
 #contacts {
     background: linear-gradient(135deg, #fef5e7, #fffaf0);
-    border-radius: 25px;
-    margin: 0 20px;
-    padding: 60px 20px;
+    border-radius: 30px;
+    margin: 0 30px;
+    padding: 80px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 form {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
 }
 input, textarea {
     width: 100%;
-    padding: 18px;
+    padding: 20px;
     margin: 15px 0;
-    border: 1px solid #e67e22;
-    border-radius: 12px;
+    border: 2px solid #e67e22;
+    border-radius: 15px;
     background: #fff;
     color: #3d2b1f;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 button {
     width: 100%;
-    padding: 18px;
+    padding: 20px;
     background-color: #e67e22;
     color: white;
     border: none;
-    border-radius: 12px;
+    border-radius: 15px;
     font-weight: 600;
+    font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -212,20 +227,22 @@ button:hover {
     background-color: #d35400;
 }
 footer {
-    background: #f9a825;
-    padding: 30px;
+    background: linear-gradient(135deg, #f9a825, #ffca28);
+    padding: 40px;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.2em;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
 }
 footer p, #contacts p {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     color: #3d2b1f;
 }
 #contacts p a {
     color: #e67e22;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
+    font-size: 1.2em;
 }
 #contacts p a:hover {
     text-decoration: underline;
@@ -235,8 +252,8 @@ footer p, #contacts p {
     100% { transform: rotate(360deg); }
 }
 @media (max-width: 768px) {
-    header h1 { font-size: 2.5em; }
-    header p { font-size: 1.2em; }
-    h2 { font-size: 2em; }
+    header h1 { font-size: 2.8em; }
+    header p { font-size: 1.4em; }
+    h2 { font-size: 2.2em; }
     .card, .case-card { width: 100%; }
 }
