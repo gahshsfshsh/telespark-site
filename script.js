@@ -37,7 +37,8 @@ document.getElementById('contact-form')?.addEventListener('submit', function(e) 
     .then(response => response.json())
     .then(result => {
         if (result.ok) {
-            alert(`Спасибо, ${data.name}! Ваша заявка отправлена.`);
+            document.getElementById('submit-btn').classList.add('hidden');
+            document.getElementById('success-btn').classList.remove('hidden');
             this.reset();
         } else {
             alert('Ошибка отправки: ' + result.description);
